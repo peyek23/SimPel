@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginactivity">
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bglogin2" />
+
+    <EditText
+        android:id="@+id/kolomemail"
+        android:background="@drawable/barinput"
+        android:layout_width="318dp"
+        android:textColor="#6F707F"
+        android:drawableLeft="@drawable/emailicon"
+        android:drawablePadding="12sp"
+        android:layout_height="65dp"
+        android:ems="10"
+        android:fontFamily="@font/monreg"
+        android:hint="E-mail"
+        android:paddingStart="12sp"
+        android:paddingEnd="12sp"
+        android:paddingBottom="5sp"
+        android:inputType="textEmailAddress"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.41" />
+
+    <EditText
+        android:id="@+id/kolompassword"
+        android:layout_width="318dp"
+        android:paddingStart="12sp"
+        android:paddingEnd="12sp"
+        android:drawableLeft="@drawable/passwordicon"
+        android:layout_height="65dp"
+        android:layout_marginTop="26dp"
+        android:paddingBottom="5sp"
+        android:textColor="#6F707F"
+        android:background="@drawable/barinput"
+        android:ems="10"
+        android:hint="Password"
+        android:drawablePadding="12sp"
+        app:passwordToggleEnabled = "true"
+        android:textSize="18sp"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kolomemail"
+        app:layout_constraintVertical_bias="0.048"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnlogin"
+        android:layout_width="135dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="184dp"
+        android:background="@drawable/loginbtnbaru"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kolompassword"
+        app:layout_constraintVertical_bias="0.04"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/monreg"
+        android:text="Belum punya akun?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#ffff"
+        app:layout_constraintHorizontal_bias="0.366"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnlogin"
+        app:layout_constraintVertical_bias="0.052" />
+
+    <TextView
+        android:id="@+id/textdaftar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/monreg"
+        android:text="Daftar"
+        android:textColor="#00DCFA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.702"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnlogin"
+        app:layout_constraintVertical_bias="0.052" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="273dp"
+        android:layout_height="206dp"
+        app:layout_constraintBottom_toTopOf="@+id/kolomemail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.663"
+        app:srcCompat="@drawable/simpeglogin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

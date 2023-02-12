@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1010564792603",
+    "project_id": "simpeg-9b333",
+    "storage_bucket": "simpeg-9b333.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010564792603:android:2d99e404e67cc978a913be",
+        "android_client_info": {
+          "package_name": "com.example.simpeg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010564792603-7lqaerooqsaso0e49l3r2ch9agkf76qm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhg0MUUyBE-plFSuMl2wiXN3spWOKLvrE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1010564792603-7lqaerooqsaso0e49l3r2ch9agkf76qm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
