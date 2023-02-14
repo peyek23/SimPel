@@ -1,52 +1,111 @@
 package com.example.simpeg
 
 import android.annotation.SuppressLint
+import android.app.Activity
+import android.content.Intent
+import android.net.Uri
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.WindowManager
-import android.webkit.WebView
-import android.webkit.WebViewClient
+import android.webkit.*
 
 class kinerja : AppCompatActivity() {
 
-    lateinit var webView: WebView
+    private lateinit var webView: WebView
+    private var filePathCallback: ValueCallback<Array<Uri>>? = null
+    private var filePath: String? = null
+    private val REQUEST_FILE_CHOOSE = 1
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kinerja)
 
-        supportActionBar?.hide()
-        window.setFlags(
+        getWindow().setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
-        )
-
+        );
 
         webView = findViewById(R.id.webview)
-        webView.webViewClient = WebViewClient()
-        webView.loadUrl("https://www.ekin.pkcdurensawit.com/")
-        webView.settings.builtInZoomControls = true
 
-        // web setting
-        val webSettings = webView.settings
+        webView.settings.javaScriptEnabled = true
+        webView.settings.allowFileAccess = true
 
-        // mengaktifkan javascript
-        webSettings.javaScriptEnabled = true
+        webView.settings.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
 
-        // mengaktifkan tool seperti bootstrap
-        webSettings.domStorageEnabled = true
+        webView.webViewClient = object : WebViewClient() {
+            override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
+                if (url != null) {
+                    view?.loadUrl(url)
+                }
+                return true
+            }
+        }
 
+        webView.webChromeClient = object : WebChromeClient() {
+            override fun onShowFileChooser(
+                webView: WebView,
+                filePathCallback: ValueCallback<Array<Uri>>,
+                fileChooserParams: FileChooserParams
+            ): Boolean {
+                this@kinerja.filePathCallback = filePathCallback
+                val intent = Intent(Intent.ACTION_GET_CONTENT)
+                intent.type = "*/*"
+                startActivityForResult(
+                    Intent.createChooser(intent, "Choose File"),
+                    REQUEST_FILE_CHOOSE
+                )
+                return true
+            }
+        }
 
+        webView.loadUrl("https://forms.zohopublic.com/puskesmasklender3/form/gg/formperma/QFfyE7ggYcv645acPFOmAUMVtt6NwbzoV_j5_n-_2P8")
     }
 
-    override fun onBackPressed() {
-        if (webView.canGoBack()){
-            webView.goBack()
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == Activity.RESULT_OK) {
+            when (requestCode) {
+                REQUEST_FILE_CHOOSE -> {
+                    filePath = data?.data?.let { getRealPathFromURI(it) }
+                    arrayOf(data?.data)?.let {
+                        filePathCallback?.onReceiveValue(
+                            it.filterNotNull().toTypedArray()
+                        )
+                    }
+                }
+
+            }
         } else {
-            super.onBackPressed()
+            filePathCallback?.onReceiveValue(null)
         }
     }
+
+    private fun getRealPathFromURI(contentURI: Uri): String {
+        val result: String
+        val cursor = contentResolver.query(contentURI, null, null, null, null)
+        if (cursor == null) {
+            result = contentURI.path!!
+        } else {
+            cursor.moveToFirst()
+            val idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA)
+            result = cursor.getString(idx)
+            cursor.close()
+        }
+        return result
+    }
+
+    fun ValueCallback<Array<Uri>>?.onReceiveValue(value: Array<Uri>?) {
+        this?.onReceiveValue(value)
+    }
+
 }
+
+
+
+
+
 
 

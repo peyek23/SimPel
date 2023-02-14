@@ -3,6 +3,7 @@ import android.Manifest
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -23,6 +24,11 @@ class absen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAbsenBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        getWindow().setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        );
 
         codeScanner()
         setPermission()

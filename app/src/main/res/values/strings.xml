@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SimPeg</string>
+    <string name="app_name">Simpel Dursa</string>
     <string name="title_activity_survey">survey</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>

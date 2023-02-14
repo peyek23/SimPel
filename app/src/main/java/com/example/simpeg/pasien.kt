@@ -29,6 +29,10 @@ class pasien : AppCompatActivity() {
             val intent = Intent(this, bantuan::class.java)
             startActivity(intent)
         }
+        binding.pengajuanbpjsbtn.setOnClickListener {
+            val intent = Intent(this, daftarpuskesbpjs::class.java)
+            startActivity(intent)
+        }
     }
 
 }

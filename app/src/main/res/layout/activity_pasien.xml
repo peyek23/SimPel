@@ -54,10 +54,10 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/krtitikdansaranbtn"
+        android:id="@+id/pengajuanbpjsbtn"
         android:layout_width="345dp"
         android:layout_height="92dp"
-        android:background="@drawable/kritikdansaranbar"
+        android:background="@drawable/pengajuanbpjsbar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

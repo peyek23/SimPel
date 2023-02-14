@@ -7,22 +7,32 @@
     tools:context=".loginactivity">
 
     <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="365dp"
-        android:layout_height="145dp"
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:scaleType="fitXY"
-        android:src="@drawable/varatas"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:srcCompat="@drawable/bglogin2" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="273dp"
+        android:layout_height="206dp"
+        app:layout_constraintBottom_toTopOf="@+id/kolomemaildaftar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.663"
+        app:srcCompat="@drawable/simpeglogin" />
 
     <EditText
         android:id="@+id/kolomemaildaftar"
         android:paddingStart="12sp"
         android:textColor="#6F707F"
+        android:paddingBottom="5sp"
         android:paddingEnd="12sp"
         android:drawableLeft="@drawable/emailicon"
         android:background="@drawable/barinput"
@@ -43,25 +53,26 @@
 
     <EditText
         android:id="@+id/kolompassworddaftar"
-        android:textColor="#6F707F"
         android:layout_width="318dp"
         android:layout_height="59dp"
-        android:paddingStart="12sp"
-        android:paddingEnd="12sp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/barinput"
         android:drawableLeft="@drawable/passwordicon"
         android:drawablePadding="12sp"
-        android:layout_marginTop="26dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        android:background="@drawable/barinput"
+        android:paddingStart="12sp"
+        android:paddingEnd="12sp"
+        android:paddingBottom="5sp"
+        android:textColor="#6F707F"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/kolomemaildaftar"
-        app:layout_constraintVertical_bias="0.031"
+        app:layout_constraintVertical_bias="0.024"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
@@ -69,6 +80,7 @@
         android:layout_width="318dp"
         android:layout_height="59dp"
         android:background="@drawable/barinput"
+        android:paddingBottom="5sp"
         android:textColor="#6F707F"
         android:drawablePadding="12sp"
         android:paddingStart="12sp"
@@ -102,53 +114,12 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/monreg"
-        android:text="Registrasi"
-        android:textColor="#ffff"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView12"
-        app:layout_constraintVertical_bias="0.122" />
-
-    <TextView
-        android:id="@+id/textViewsimpeg"
-        android:layout_width="213dp"
-        android:layout_height="71dp"
-        android:layout_marginBottom="132dp"
-        android:fontFamily="@font/monex"
-        android:text="SimPeg"
-        android:textColor="#ffff"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toTopOf="@+id/kolomemaildaftar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView12"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="181dp"
-        android:layout_height="115dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/varbawah"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnsubmitdaftar"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/monreg"
         android:text="Butuh bantuan?"
+        android:textColor="#ffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.353"
@@ -157,7 +128,7 @@
         app:layout_constraintVertical_bias="0.049" />
 
     <TextView
-        android:id="@+id/textklikdisini"
+        android:id="@+id/disini"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/monreg"

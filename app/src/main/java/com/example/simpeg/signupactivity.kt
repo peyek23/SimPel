@@ -23,17 +23,18 @@ class signupactivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
 
-
+        getWindow().setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        );
 
         binding = ActivitySignupactivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         firebaseAuth = FirebaseAuth.getInstance()
 
-        binding.textView.setOnClickListener {
-            val intent = Intent(this, loginactivity::class.java)
-            startActivity(intent)
-        }
+
+
         binding.btnsubmitdaftar.setOnClickListener {
             val email = binding.kolomemaildaftar.text.toString()
             val pass = binding.kolompassworddaftar.text.toString()
