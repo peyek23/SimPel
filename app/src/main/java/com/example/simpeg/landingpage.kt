@@ -24,11 +24,11 @@ class landingpage : AppCompatActivity() {
         );
 
         binding.pasienbtn.setOnClickListener {
-            val intent = Intent(this, pasien::class.java)
+            val intent = Intent(this, loginactivity::class.java)
             startActivity(intent)
         }
         binding.pegawaibtn.setOnClickListener {
-            val intent = Intent(this, loginactivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
 
         }

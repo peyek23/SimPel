@@ -24,6 +24,9 @@
         android:theme="@style/Theme.SimPeg"
         tools:targetApi="31">
         <activity
+            android:name=".loginpegawai"
+            android:exported="false" />
+        <activity
             android:name=".daftarpuskesbpjs"
             android:exported="false" />
         <activity

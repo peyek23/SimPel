@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity(){
         binding.keluarbtn.setOnClickListener {
             val intent = Intent(this, loginactivity::class.java)
             startActivity(intent)
-            Toast.makeText(this,"Berhasil keluar !", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Berhasil keluar !", Toast.LENGTH_SHORT).show()
             finish()
 
             getWindow().setFlags(
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity(){
             setContentView(R.layout.activity_main)
 
         }
-        binding.datadiribtn.setOnClickListener {
+        binding.esarpras.setOnClickListener {
             val intent = Intent(this, layoutcuti::class.java)
             startActivity(intent)
 
