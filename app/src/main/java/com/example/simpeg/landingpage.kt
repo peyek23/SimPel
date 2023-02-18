@@ -18,23 +18,19 @@ class landingpage : AppCompatActivity() {
         binding = ActivityLandingpageBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        getWindow().setFlags(
-            WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN
-        );
 
         binding.pasienbtn.setOnClickListener {
-            val intent = Intent(this, loginactivity::class.java)
+            val intent = Intent(this, pendaftaranonline::class.java)
             startActivity(intent)
         }
         binding.pegawaibtn.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, loginactivity::class.java)
             startActivity(intent)
 
         }
 
         binding.disinilp.setOnClickListener {
-            val intent = Intent(this, bantuan::class.java)
+            val intent = Intent(this, pasien2::class.java)
             startActivity(intent)
         }
 

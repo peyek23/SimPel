@@ -41,32 +41,33 @@ class signupactivity : AppCompatActivity() {
             val confirmPass = binding.tulisulang.text.toString()
 
 
-                if (email.isNotEmpty() && pass.isNotEmpty() && confirmPass.isNotEmpty()) {
-                    if (pass == confirmPass) {
+            if (email.isNotEmpty() && pass.isNotEmpty() && confirmPass.isNotEmpty()) {
+                if (pass == confirmPass) {
 
-                        firebaseAuth.createUserWithEmailAndPassword(email, pass)
-                            .addOnCompleteListener {
-                                if (it.isSuccessful) {
-                                    val intent = Intent(this, loginactivity::class.java)
-                                    startActivity(intent)
-                                    Toast.makeText(
-                                        this,
-                                        "Berhasil daftar!", Toast.LENGTH_SHORT).show()
-                                } else {
-                                    Toast.makeText(
-                                        this,
-                                        "E-mail sudah terdaftar!", Toast.LENGTH_SHORT).show()
-                                }
+                    firebaseAuth.createUserWithEmailAndPassword(email, pass)
+                        .addOnCompleteListener {
+                            if (it.isSuccessful) {
+                                val intent = Intent(this, loginactivity::class.java)
+                                startActivity(intent)
+                                Toast.makeText(
+                                    this,
+                                    "Berhasil daftar!", Toast.LENGTH_SHORT
+                                ).show()
+                            } else {
+                                Toast.makeText(
+                                    this,
+                                    "E-mail sudah terdaftar!", Toast.LENGTH_SHORT
+                                ).show()
                             }
-                    } else {
-                        Toast.makeText(this, "Password tidak sesuai ", Toast.LENGTH_SHORT).show()
-                    }
+                        }
                 } else {
-                    Toast.makeText(this, "Harap isi semua kolom !", Toast.LENGTH_SHORT).show()
-
+                    Toast.makeText(this, "Password tidak sesuai ", Toast.LENGTH_SHORT).show()
                 }
+            } else {
+                Toast.makeText(this, "Harap isi semua kolom !", Toast.LENGTH_SHORT).show()
+
             }
         }
     }
-
+}
 

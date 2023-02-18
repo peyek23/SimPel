@@ -24,7 +24,13 @@
         android:theme="@style/Theme.SimPeg"
         tools:targetApi="31">
         <activity
-            android:name=".loginpegawai"
+            android:name=".pasien2"
+            android:exported="false" />
+        <activity
+            android:name=".esarpras"
+            android:exported="false" />
+        <activity
+            android:name=".poligigi"
             android:exported="false" />
         <activity
             android:name=".daftarpuskesbpjs"

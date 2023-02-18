@@ -26,15 +26,12 @@ class MainActivity : AppCompatActivity(){
             Toast.makeText(this, "Berhasil keluar !", Toast.LENGTH_SHORT).show()
             finish()
 
-            getWindow().setFlags(
-                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN
-            );
+
             setContentView(R.layout.activity_main)
 
         }
         binding.esarpras.setOnClickListener {
-            val intent = Intent(this, layoutcuti::class.java)
+            val intent = Intent(this, esarpras::class.java)
             startActivity(intent)
 
 
@@ -58,4 +55,3 @@ class MainActivity : AppCompatActivity(){
         }
     }
 }
-

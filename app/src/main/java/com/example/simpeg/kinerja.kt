@@ -30,12 +30,15 @@ class kinerja : AppCompatActivity() {
 
         webView = findViewById(R.id.webview)
 
+
+
         webView.settings.javaScriptEnabled = true
         webView.settings.allowFileAccess = true
 
         webView.settings.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
 
         webView.webViewClient = object : WebViewClient() {
+            @Deprecated("Deprecated in Java")
             override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
                 if (url != null) {
                     view?.loadUrl(url)
@@ -61,7 +64,7 @@ class kinerja : AppCompatActivity() {
             }
         }
 
-        webView.loadUrl("https://forms.zohopublic.com/puskesmasklender3/form/gg/formperma/QFfyE7ggYcv645acPFOmAUMVtt6NwbzoV_j5_n-_2P8")
+        webView.loadUrl("https://youtu.be/z6VlP0o_sDc")
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
