@@ -25,7 +25,15 @@ class pendaftaranonline : AppCompatActivity() {
 
 
         binding.kld1klik.setOnClickListener {
-            val intent = Intent(this, landingpage::class.java)
+            val intent = Intent(this, pklklender1::class.java)
+            startActivity(intent)
+        }
+        binding.kld2klik.setOnClickListener {
+            val intent = Intent(this, pklklender2::class.java)
+            startActivity(intent)
+        }
+        binding.kld3klik.setOnClickListener {
+            val intent = Intent(this, pklklender3::class.java)
             startActivity(intent)
         }
 
@@ -59,6 +67,5 @@ class pendaftaranonline : AppCompatActivity() {
 
         imageSlider.setImageList(imageList, ScaleTypes.FIT)
     }
+    }
 
-
-}

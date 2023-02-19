@@ -64,7 +64,7 @@ class kinerja : AppCompatActivity() {
             }
         }
 
-        webView.loadUrl("https://youtu.be/z6VlP0o_sDc")
+        webView.loadUrl("https://www.instagram.com/puskesdurensawit/")
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

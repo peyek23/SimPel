@@ -24,6 +24,18 @@
         android:theme="@style/Theme.SimPeg"
         tools:targetApi="31">
         <activity
+            android:name=".perhatianbpjs"
+            android:exported="false" />
+        <activity
+            android:name=".pklklender2"
+            android:exported="false" />
+        <activity
+            android:name=".pklklender1"
+            android:exported="false" />
+        <activity
+            android:name=".pklklender3"
+            android:exported="false" />
+        <activity
             android:name=".pasien2"
             android:exported="false" />
         <activity

@@ -25,10 +25,6 @@ class absen : AppCompatActivity() {
         binding = ActivityAbsenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        getWindow().setFlags(
-            WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN
-        );
 
         codeScanner()
         setPermission()

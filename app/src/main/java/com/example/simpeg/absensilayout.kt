@@ -15,10 +15,6 @@ class absensilayout : AppCompatActivity() {
         binding = ActivityAbsensiBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        getWindow().setFlags(
-            WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN
-        );
 
         //pjlp
         binding.btnabsenpjlp.setOnClickListener {
