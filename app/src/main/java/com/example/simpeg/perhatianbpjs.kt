@@ -17,12 +17,6 @@ class perhatianbpjs : AppCompatActivity() {
         setContentView(binding.root)
 
 
-
-        Handler().postDelayed({
-            val Intent = Intent(this@perhatianbpjs, esarpras::class.java)
-            startActivity(Intent)
-            finish()
-        }, 20000)
     }
 
 }

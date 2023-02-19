@@ -20,16 +20,27 @@
         app:srcCompat="@drawable/bgmainmenu" />
 
     <Button
+        android:id="@+id/lainnyabtn"
+        android:layout_width="345dp"
+        android:layout_height="92dp"
+        android:background="@drawable/permintaanbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/esarpras"
+        app:layout_constraintVertical_bias="0.166"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
         android:id="@+id/absenbtn"
         android:layout_width="345dp"
         android:layout_height="92dp"
         android:background="@drawable/absenbar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.354"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.313"
+        app:layout_constraintVertical_bias="0.317"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
@@ -39,10 +50,9 @@
         android:background="@drawable/cutibar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.354"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/absenbtn"
-        app:layout_constraintVertical_bias="0.033"
+        app:layout_constraintVertical_bias="0.031"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
@@ -52,10 +62,9 @@
         android:background="@drawable/kinerjabar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.354"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/absenbtn"
-        app:layout_constraintVertical_bias="0.302"
+        app:layout_constraintTop_toBottomOf="@+id/cutibtn"
+        app:layout_constraintVertical_bias="0.058"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
@@ -65,23 +74,10 @@
         android:background="@drawable/esarprasbar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/absenbtn"
-        app:layout_constraintVertical_bias="0.573"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <Button
-        android:id="@+id/lainnyabtn"
-        android:layout_width="345dp"
-        android:layout_height="92dp"
-        android:background="@drawable/permintaanbar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.416"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/absenbtn"
-        app:layout_constraintVertical_bias="0.846"
+        app:layout_constraintTop_toBottomOf="@+id/gajibtn"
+        app:layout_constraintVertical_bias="0.087"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView

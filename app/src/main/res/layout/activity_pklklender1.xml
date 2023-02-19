@@ -56,7 +56,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/kld1cekbpjs"
+                android:id="@+id/bpjsditolak"
                 android:layout_width="120dp"
                 android:layout_height="150dp"
                 android:layout_margin="10dp"
@@ -113,7 +113,7 @@
         app:layout_constraintHorizontal_bias="0.345"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scroll"
-        app:layout_constraintVertical_bias="0.158" />
+        app:layout_constraintVertical_bias="0.813" />
 
     <TextView
         android:id="@+id/textView10"
@@ -129,7 +129,20 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView9"
         app:layout_constraintTop_toBottomOf="@+id/scroll"
-        app:layout_constraintVertical_bias="0.158" />
+        app:layout_constraintVertical_bias="0.813" />
+
+    <TextView
+        android:id="@+id/perhatianbpjs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="* klik disini untuk melihat persyaratan pendaftaran BPJS"
+        android:textColor="#ff0000"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll"
+        app:layout_constraintVertical_bias="0.242" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

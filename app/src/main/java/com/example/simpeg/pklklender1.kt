@@ -17,8 +17,12 @@ class pklklender1 : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        binding.kld1bpjs.setOnClickListener {
+        binding.perhatianbpjs.setOnClickListener {
             val intent = Intent(this, perhatianbpjs::class.java)
+            startActivity(intent)
+        }
+        binding.bpjsditolak.setOnClickListener {
+            val intent = Intent(this, bpjsditolak::class.java)
             startActivity(intent)
         }
     }

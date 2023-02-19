@@ -97,6 +97,7 @@
                 </HorizontalScrollView>
 
                 <ImageView
+                    android:id="@+id/imageView17"
                     android:layout_width="231dp"
                     android:layout_height="40dp"
                     android:background="@drawable/tujuanpkm"
@@ -105,17 +106,17 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0" />
+                    app:layout_constraintVertical_bias="0.956" />
 
                 <TextView
                     android:id="@+id/textView7"
-                    android:layout_width="208dp"
-                    android:layout_height="25dp"
+                    android:layout_width="227dp"
+                    android:layout_height="26dp"
                     android:fontFamily="@font/monreg"
                     android:paddingStart="12dp"
-                    android:text="*Pilih puskesmas sesuai dengan faskes !"
-                    android:textSize="10dp"
+                    android:text="* Pilih puskesmas sesuai dengan faskes !"
                     android:textColor="#FF0000"
+                    android:textSize="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -123,37 +124,48 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.965" />
 
+                <Button
+                    android:id="@+id/tandatanya"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="23dp"
+                    android:background="@drawable/helpicon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.955"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-            <ImageView
-                android:layout_width="231dp"
-                android:layout_height="39dp"
-                android:background="@drawable/yukbaca"
-                app:layout_constraintBottom_toTopOf="@+id/scroll2"
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/monbol"
+                android:paddingStart="10dp"
+                android:text="Artikel"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <HorizontalScrollView
+                android:id="@+id/scroll3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.461" />
+                app:layout_constraintVertical_bias="0.495">
 
-                <HorizontalScrollView
-                    android:id="@+id/scroll3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.495">
-
-                    <LinearLayout
+                <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
+                            android:id="@+id/artikel1"
                             android:layout_width="150dp"
                             android:layout_height="200dp"
                             android:layout_margin="10dp"
@@ -207,10 +219,15 @@
                 android:layout_height="290dp">
 
 
-                <ImageView
-                    android:layout_width="97dp"
-                    android:layout_height="39dp"
-                    android:background="@drawable/informasi"
+                <TextView
+                    android:id="@+id/textViewinformasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/monbol"
+                    android:paddingStart="10dp"
+                    android:text="Informasi"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
                     app:layout_constraintBottom_toTopOf="@+id/scroll2"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -235,6 +252,7 @@
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
+                            android:id="@+id/informasi1"
                             android:layout_width="350dp"
                             android:layout_height="200dp"
                             android:layout_margin="10dp"
@@ -245,12 +263,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:scaleType="fitXY"
-                                android:src="@drawable/bpjsbanner" />
+                                android:src="@drawable/informasi1" />
 
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="150dp"
+                            android:id="@+id/informasi2"
+                            android:layout_width="350dp"
                             android:layout_height="200dp"
                             android:layout_margin="10dp"
                             app:cardBackgroundColor="@color/colorTransparent"
@@ -260,7 +279,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:scaleType="fitXY"
-                                android:src="@drawable/iklan2" />
+                                android:src="@drawable/informasi2" />
 
                         </androidx.cardview.widget.CardView>
 
@@ -344,12 +363,15 @@
                     android:layout_marginBottom="14dp"
                     android:fontFamily="@font/monbol"
                     android:text="Tim Manajemen"
+                    android:paddingStart="3dp"
                     android:textColor="#000000"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toTopOf="@+id/imageSlider"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.021"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

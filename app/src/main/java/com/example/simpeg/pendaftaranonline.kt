@@ -32,8 +32,25 @@ class pendaftaranonline : AppCompatActivity() {
             val intent = Intent(this, pklklender2::class.java)
             startActivity(intent)
         }
+
         binding.kld3klik.setOnClickListener {
             val intent = Intent(this, pklklender3::class.java)
+            startActivity(intent)
+        }
+        binding.informasi1.setOnClickListener {
+            val intent = Intent(this, informasi1::class.java)
+            startActivity(intent)
+        }
+        binding.informasi2.setOnClickListener {
+            val intent = Intent(this, informasi2::class.java)
+            startActivity(intent)
+        }
+        binding.artikel1.setOnClickListener {
+            val intent = Intent(this, artikel1::class.java)
+            startActivity(intent)
+        }
+        binding.tandatanya.setOnClickListener {
+            val intent = Intent(this, tandatanya::class.java)
             startActivity(intent)
         }
 
